@@ -112,3 +112,17 @@ button {
         }
     }
 }
+
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+main {
+    display: none;
+}
+
+footer {
+    display: none;
+}

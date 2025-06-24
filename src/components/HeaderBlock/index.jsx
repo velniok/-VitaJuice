@@ -3,6 +3,7 @@ import HeaderMenu from "./HeaderMenu";
 import HeaderTop from "./HeaderTop";
 import logo from '../../assets/logo.png'
 import { useEffect } from "react";
+import HeaderBurger from "./HeaderBurger";
 
 
 export default function Header() {
@@ -17,6 +18,7 @@ export default function Header() {
                     <HeaderContacts />
                 </nav>
                 <img src={logo} alt="Vita Juice" className="header__logo" />
+                <HeaderBurger />
             </div>
         </div>
     </header>
