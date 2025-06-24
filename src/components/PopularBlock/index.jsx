@@ -61,6 +61,7 @@ export default function Popular() {
 
         return () => {
             window.removeEventListener('resize', handleResize);
+            console.log(screenWidth)
             if (screenWidth > 576) {
                 setScreenCard(prev => prev = 3)
             } else {
@@ -96,6 +97,7 @@ export default function Popular() {
                 <button className={`popular__card-btn--next btn--arrow ${activeSlider === popularCards.length - screenCard ? 'disable' : ''}`} onClick={() => {
                     if (activeSlider < popularCards.length - screenCard) {
                         setActiveSlider(prev => prev + 1)
+                        console.log(screenCard)
                     }
                 }}>
                     <svg width="23" height="35" viewBox="0 0 23 35" fill="none" xmlns="http://www.w3.org/2000/svg">
