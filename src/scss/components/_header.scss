@@ -252,6 +252,8 @@
 }
 
 .mobile {
+    display: none;
+
     &__nav {
         
         &-list {
@@ -299,6 +301,7 @@
         &-list {
             padding-top: 25px;
             padding-left: 28px;
+            display: flex;
             flex-direction: column;
             row-gap: 13px;
         }
@@ -348,7 +351,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 576px) {
     .header {
         &-wrapper {
             position: static;
@@ -367,5 +370,9 @@
         &__logo {
             display: none;
         }
+    }
+
+    .mobile {
+        display: block;
     }
 }
