@@ -7,42 +7,42 @@ export default function Products() {
         {
             id: 1,
             title: 'СОКИ',
-            img: './-VitaJuice/img/products/products-nav-01.png'
+            img: '/-VitaJuice/img/products/products-nav-01.png'
         },
                 {
             id: 2,
             title: 'МИКСЫ',
-            img: './-VitaJuice/img/products/products-nav-02.png'
+            img: '/-VitaJuice/img/products/products-nav-02.png'
         },
                 {
             id: 3,
             title: 'СМУЗИ',
-            img: './-VitaJuice/img/products/products-nav-03.png'
+            img: '/-VitaJuice/img/products/products-nav-03.png'
         },
                 {
             id: 4,
             title: 'ДЕТОКСЫ',
-            img: './-VitaJuice/img/products/products-nav-04.png'
+            img: '/-VitaJuice/img/products/products-nav-04.png'
         },
                 {
             id: 5,
             title: 'ЛАССИ',
-            img: './-VitaJuice/img/products/products-nav-05.png'
+            img: '/-VitaJuice/img/products/products-nav-05.png'
         },
                 {
             id: 6,
             title: 'БОУЛЫ',
-            img: './-VitaJuice/img/products/products-nav-06.png'
+            img: '/-VitaJuice/img/products/products-nav-06.png'
         },
                 {
             id: 7,
             title: 'САЛАТЫ',
-            img: './-VitaJuice/img/products/products-nav-07.png'
+            img: '/-VitaJuice/img/products/products-nav-07.png'
         },
                 {
             id: 8,
             title: 'ЗДОРОВАЯ ЕДА',
-            img: './-VitaJuice/img/products/products-nav-08.png'
+            img: '/-VitaJuice/img/products/products-nav-08.png'
         },
     ]
 
