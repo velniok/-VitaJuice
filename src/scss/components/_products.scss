@@ -44,3 +44,42 @@
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    .products {
+        &-inner {
+            display: unset;
+        }
+
+        &-img {
+            display: none;
+        }
+
+        &__nav {
+
+            &-list {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 20px;
+                row-gap: 19px;
+            }
+
+            &-item {
+                width: 140px;
+            }
+
+            &-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            &-title {
+                margin-top: 0;
+                font-size: 30px;
+
+                &.edit {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}

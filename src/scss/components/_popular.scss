@@ -15,7 +15,6 @@
         &-list {
             width: 9999px;
             display: flex;
-            column-gap: 30px;
         }
 
         &-item {
@@ -85,6 +84,51 @@
                 top: 50%;
                 right: -90px;
                 transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .popular {
+
+        &__card {
+
+            &-item {
+                width: 300px;
+                height: 100%;
+                padding: 50px 41px;
+            }
+
+            &-img {
+                height: 148px;
+            }
+
+            &-title {
+                margin-top: 23px;
+            }
+
+            &-size {
+                margin-top: 17px;
+            }
+
+            &-wrapper {
+                margin-top: 24px;
+            }
+
+            &-btn {
+                margin-top: 17px;
+            }
+
+            &-btn {
+
+                &--next {
+                    right: 0px;
+                }
+
+                &--prev {
+                    left: 0px;
+                }
             }
         }
     }

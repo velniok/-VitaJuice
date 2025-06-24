@@ -5,11 +5,20 @@ export default function HeaderBurger() {
     const [activeBurger, setActiveBurger] = useState(false)
     const [activeMenu, setActiveMenu] = useState(false)
 
+    const clickBurger = () => {
+        setActiveBurger(!activeBurger)
+        document.body.classList.add('disable')
+    }
+
+    const clickMenu = () => {
+        setActiveMenu(!activeMenu)
+    }
+
   return (
     <div className="mobile">
         <nav className="mobile__nav">
             <ul className="mobile__nav-list">
-                <li className="mobile__nav-item" onClick={() => setActiveBurger((prev) => prev = true)}>
+                <li className="mobile__nav-item" onClick={() => clickBurger()}>
                     <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M35.5248 0H2.6288C1.68999 0 0.821853 0.454346 0.352447 1.19242C-0.117482 1.93001 -0.117482 2.83916 0.352447 3.57681C0.821853 4.31488 1.68995 4.76923 2.6288 4.76923H35.5248C36.4636 4.76923 37.3317 4.31488 37.8011 3.57681C38.271 2.83922 38.271 1.93007 37.8011 1.19242C37.3317 0.454346 36.4636 0 35.5248 0Z" fill="#2B2A29" />
                         <path d="M35.5248 13.1154H2.6288C1.68999 13.1154 0.821853 13.5702 0.352447 14.3077C-0.117482 15.0457 -0.117482 15.9543 0.352447 16.6923C0.821853 17.4298 1.68995 17.8846 2.6288 17.8846H35.5248C36.4636 17.8846 37.3317 17.4298 37.8011 16.6923C38.271 15.9543 38.271 15.0458 37.8011 14.3077C37.3317 13.5702 36.4636 13.1154 35.5248 13.1154Z" fill="#2B2A29" />
@@ -17,7 +26,7 @@ export default function HeaderBurger() {
                     </svg>
                 </li>
                 <li className="mobile__nav-item">
-                    <span className="mobile__nav-menu" onClick={() => {setActiveBurger((prev) => prev = true), setActiveMenu((prev) => prev = true)}}>МЕНЮ</span>
+                    <span className="mobile__nav-menu" onClick={() => {clickBurger(), clickMenu()}}>МЕНЮ</span>
                 </li>
                 <li className="mobile__nav-item">
                     <svg width="23" height="31" viewBox="0 0 23 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +57,7 @@ export default function HeaderBurger() {
         <div className="mobile__burger" style={{ transform: `translateX(-${activeBurger ? 0 : 100}%)` }}>
             <div className="mobile__burger-top">
                 <img src={logoMobile} alt="Vita Juice" className="mobile__burger-logo" />
-                <button className="mobile__burger-close" onClick={() => {setActiveBurger((prev) => prev = false), setActiveMenu((prev) => prev = false)}}>
+                <button className="mobile__burger-close" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>
                     <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.334668 13.7002C0.534668 13.9002 0.734668 14.0002 1.03467 14.0002C1.33467 14.0002 1.53467 13.9002 1.73467 13.7002L7.03467 8.40024L12.3347 13.7002C12.5347 13.9002 12.8347 14.0002 13.0347 14.0002C13.2347 14.0002 13.5347 13.9002 13.7347 13.7002C14.1347 13.3002 14.1347 12.7002 13.7347 12.3002L8.43467 7.00024L13.7347 1.70024C14.1347 1.30024 14.1347 0.700244 13.7347 0.300244C13.3347 -0.0997559 12.7347 -0.0997559 12.3347 0.300244L7.03467 5.60024L1.73467 0.300244C1.33467 -0.0997559 0.734668 -0.0997559 0.334668 0.300244C-0.065332 0.700244 -0.065332 1.30024 0.334668 1.70024L5.63467 7.00024L0.334668 12.3002C-0.065332 12.7002 -0.065332 13.3002 0.334668 13.7002Z" fill="#2B2A29" />
                     </svg>
@@ -56,7 +65,7 @@ export default function HeaderBurger() {
             </div>
             <div className="mobile__burger-content">
                 <ul className="mobile__burger-list">
-                    <li className="mobile__burger-item" onClick={() => setActiveMenu((prev) => prev = true)}>
+                    <li className="mobile__burger-item" onClick={() => clickMenu()}>
                         МЕНЮ
                     </li>
                     <li className="mobile__burger-item">

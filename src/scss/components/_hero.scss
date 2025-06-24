@@ -104,3 +104,53 @@
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    .hero {
+
+        &__slider {
+
+            &-item {
+                background-size: cover;
+
+                & .container {
+                    padding: 0 27px;
+                }
+            }
+
+            &-content {
+                padding: 20px 0;
+            }
+
+            &-title {
+                width: 133px;
+                height: 89px;
+            }
+
+            &-price {
+                width: 80px;
+                height: 89px;
+            }
+            
+            &-btn {
+                bottom: 10px;
+                column-gap: 17px;
+
+                & svg {
+                    width: 8px;
+                    height: 13px;
+                }
+
+                &--circle {
+                    width: 5px;
+                    height: 4px;
+
+                    &.active {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

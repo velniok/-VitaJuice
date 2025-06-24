@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PopularItem from './PopularItem'
 
 export default function Popular() {
@@ -6,42 +6,42 @@ export default function Popular() {
     const popularCards = [
         {
             id: 1,
-            img: './img/popular/popular-card-01.png',
+            img: './-VitaJuice/img/popular/popular-card-01.png',
             title: 'ЛАССИ',
             size: '500',
             price: '375',
         },
         {
             id: 2,
-            img: './img/popular/popular-card-02.png',
+            img: './-VitaJuice/img/popular/popular-card-02.png',
             title: 'МИКС',
             size: '500',
             price: '400',
         },
         {
             id: 3,
-            img: './img/popular/popular-card-03.png',
+            img: './-VitaJuice/img/popular/popular-card-03.png',
             title: 'БОУЛ',
             size: '500',
             price: '450',
         },
         {
             id: 4,
-            img: './img/popular/popular-card-01.png',
+            img: './-VitaJuice/img/popular/popular-card-01.png',
             title: 'ЛАССИ',
             size: '500',
             price: '375',
         },
         {
             id: 5,
-            img: './img/popular/popular-card-02.png',
+            img: './-VitaJuice/img/popular/popular-card-02.png',
             title: 'МИКС',
             size: '500',
             price: '400',
         },
         {
             id: 6,
-            img: './img/popular/popular-card-03.png',
+            img: './-VitaJuice/img/popular/popular-card-03.png',
             title: 'БОУЛ',
             size: '500',
             price: '450',
@@ -49,6 +49,25 @@ export default function Popular() {
     ]
 
     const [activeSlider, setActiveSlider] = useState(0)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    const [screenCard, setScreenCard] = useState(0)
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            if (screenWidth > 576) {
+                setScreenCard(prev => prev = 3)
+            } else {
+                setScreenCard(prev => prev = 1)
+            }
+        }
+    }, [])
 
   return (
     <section className="popular">
@@ -59,7 +78,7 @@ export default function Popular() {
                     <ul className="popular__card-list">
                         {
                             popularCards.map(obj => {
-                                let pos = activeSlider * 105
+                                let pos = activeSlider * 100
                                 return <PopularItem item={obj} pos={pos} key={obj.id} />
                             })
                         }
@@ -74,8 +93,8 @@ export default function Popular() {
                         <path d="M19.2725 0.469277C19.9863 -0.244507 21.1283 -0.101749 21.8421 0.612034C22.4131 1.32582 22.4131 2.46787 21.6994 3.18165L5.1396 17.4573L21.6994 31.8757C22.4131 32.4467 22.4131 33.5888 21.8421 34.4453C21.1283 35.1591 19.9863 35.1591 19.2725 34.5881L1.14242 18.8849C0.28588 18.1711 0.285879 16.8863 1.14242 16.1725L19.2725 0.469277Z" fill="#2B2A29" />
                     </svg>
                 </button>
-                <button className={`popular__card-btn--next btn--arrow ${activeSlider === popularCards.length - 3 ? 'disable' : ''}`} onClick={() => {
-                    if (activeSlider < popularCards.length - 3) {
+                <button className={`popular__card-btn--next btn--arrow ${activeSlider === popularCards.length - screenCard ? 'disable' : ''}`} onClick={() => {
+                    if (activeSlider < popularCards.length - screenCard) {
                         setActiveSlider(prev => prev + 1)
                     }
                 }}>

@@ -7,42 +7,42 @@ export default function Products() {
         {
             id: 1,
             title: 'СОКИ',
-            img: './img/products/products-nav-01.png'
+            img: './-VitaJuice/img/products/products-nav-01.png'
         },
                 {
             id: 2,
             title: 'МИКСЫ',
-            img: './img/products/products-nav-02.png'
+            img: './-VitaJuice/img/products/products-nav-02.png'
         },
                 {
             id: 3,
             title: 'СМУЗИ',
-            img: './img/products/products-nav-03.png'
+            img: './-VitaJuice/img/products/products-nav-03.png'
         },
                 {
             id: 4,
             title: 'ДЕТОКСЫ',
-            img: './img//products/products-nav-04.png'
+            img: './-VitaJuice/img/products/products-nav-04.png'
         },
                 {
             id: 5,
             title: 'ЛАССИ',
-            img: './img/products/products-nav-05.png'
+            img: './-VitaJuice/img/products/products-nav-05.png'
         },
                 {
             id: 6,
             title: 'БОУЛЫ',
-            img: './img/products/products-nav-06.png'
+            img: './-VitaJuice/img/products/products-nav-06.png'
         },
                 {
             id: 7,
             title: 'САЛАТЫ',
-            img: './img/products/products-nav-07.png'
+            img: './-VitaJuice/img/products/products-nav-07.png'
         },
                 {
             id: 8,
             title: 'ЗДОРОВАЯ ЕДА',
-            img: './img/products/products-nav-08.png'
+            img: './-VitaJuice/img/products/products-nav-08.png'
         },
     ]
 
@@ -56,9 +56,13 @@ export default function Products() {
                     <nav className="products__nav">
                         <ul className="products__nav-list">
                             {
-                                productNav.map(obj => (
-                                    <ProductsItem item={obj} key={obj.id} />
-                                ))
+                                productNav.map(obj => {
+                                    let edit = false
+                                    if (obj.id === 8) {
+                                        edit = true
+                                    }
+                                    return <ProductsItem edit={edit} item={obj} key={obj.id} />
+                                })
                             }
                         </ul>
                     </nav>
