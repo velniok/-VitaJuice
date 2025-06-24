@@ -95,7 +95,7 @@
         &__card {
 
             &-item {
-                width: 300px;
+                width: calc(100vw - 20px);
                 height: 100%;
                 padding: 50px 41px;
             }
