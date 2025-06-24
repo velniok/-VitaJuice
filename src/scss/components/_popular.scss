@@ -1,0 +1,91 @@
+.popular {
+
+    & .container {
+        max-width: 1620px;
+    }
+
+    &-wrapper {
+        position: relative;
+    }
+
+    &__card {
+        overflow: hidden;
+        padding: 58px 0;
+
+        &-list {
+            width: 9999px;
+            display: flex;
+            column-gap: 30px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 510px;
+            padding: 50px 54px;
+
+            transition: transform 0.5s ease-in;
+
+            &:hover h3 {
+                color: var(--yellow-color)
+            }
+        }
+
+        &-title {
+            margin-top: 19px;
+            font-size: 40px;
+
+            transition: color 0.3s ease;
+        }
+
+        &-size {
+            margin-top: 10px;
+            font-size: 25px;
+            color: #797272;
+        }
+
+        &-wrapper {
+            margin-top: 17px;
+            display: flex;
+            column-gap: 29px;
+            align-items: center;
+        }
+
+        &-price {
+            font-size: 40px;
+        }
+
+        &-like {
+            cursor: pointer;
+
+            & path {
+                fill: transparent;
+                transition: fill 0.3s, stroke 0.3s ease;
+            }
+
+            &:hover path {
+                fill: var(--yellow-color);
+                stroke: var(--yellow-color);
+            }
+        }
+
+        &-btn {
+            margin-top: 27px;
+
+            &--prev {
+                position: absolute;
+                top: 50%;
+                left: -90px;
+                transform: translateY(-50%);
+            }
+            
+            &--next {
+                position: absolute;
+                top: 50%;
+                right: -90px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

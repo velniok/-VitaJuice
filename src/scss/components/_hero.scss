@@ -1,0 +1,106 @@
+.hero {
+    position: relative;
+
+    &__slider {
+        width: 9999px;
+
+        &-wrapper {
+            overflow: hidden;
+        }
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            width: 100vw;
+            background-image: url('/img/hero/hero-bg.png');
+            background-repeat: no-repeat;
+
+            transition: transform 0.5s ease-in;
+
+            & .container {
+                max-width: 1620px;
+            }
+        }
+
+        &-content {
+            padding: 118px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-btn {
+            position: absolute;
+            bottom: 54px;
+            display: flex;
+            align-items: center;
+            column-gap: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &--prev {
+                cursor: pointer;
+
+                & path {
+                    transition: fill 0.3s ease;
+                }
+
+                &:hover path {
+                    fill: var(--yellow-color)
+                }
+
+                &.disable {
+                    cursor: default;
+
+                    &:hover path {
+                        fill: var(--white-color)
+                    }
+                }
+            }
+
+            &--next {
+                cursor: pointer;
+
+                & path {
+                    transition: fill 0.3s ease;
+                }
+
+                &:hover path {
+                    fill: var(--yellow-color)
+                }
+
+                &.disable {
+                    cursor: default;
+
+                    &:hover path {
+                        fill: var(--white-color)
+                    }
+                }
+            }
+            
+            &--circle {
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: var(--white-color);
+                border-radius: 50%;
+                cursor: pointer;
+
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: var(--yellow-color);
+                }
+
+                &.active {
+                    cursor: default;
+                    width: 20px;
+                    height: 20px;
+                    background-color: var(--yellow-color);
+                }
+            }
+        }
+    }
+}
