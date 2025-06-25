@@ -56,17 +56,18 @@ export default function Popular() {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
         }
+        
+        console.log(screenWidth)
+        if (screenWidth > 576) {
+            setScreenCard(prev => prev = 3)
+        } else {
+            setScreenCard(prev => prev = 1)
+        }
 
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            console.log(screenWidth)
-            if (screenWidth > 576) {
-                setScreenCard(prev => prev = 3)
-            } else {
-                setScreenCard(prev => prev = 1)
-            }
         }
     }, [])
 
