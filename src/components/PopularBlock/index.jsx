@@ -98,6 +98,7 @@ export default function Popular() {
                     if (activeSlider < popularCards.length - screenCard) {
                         setActiveSlider(prev => prev + 1)
                         console.log(screenCard)
+                        console.log(screenWidth)
                     }
                 }}>
                     <svg width="23" height="35" viewBox="0 0 23 35" fill="none" xmlns="http://www.w3.org/2000/svg">
