@@ -2,6 +2,8 @@
 
     &-wrapper {
         background-color: var(--green03-color);
+        border-bottom: 2px solid var(--black-color);
+        border-top: 2px solid var(--black-color);
     }
 
     &-inner {

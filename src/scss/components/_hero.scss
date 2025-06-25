@@ -1,5 +1,6 @@
 .hero {
     position: relative;
+    border-bottom: 2px solid var(--black-color);
 
     &__slider {
         width: 9999px;

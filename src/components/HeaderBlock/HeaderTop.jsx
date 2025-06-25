@@ -1,9 +1,18 @@
+import { useState } from "react"
+import ModalBlock from "../Modals"
 
 
 export default function HeaderTop() {
+
+    const [openModalRegion, setOpenModalRegion] = useState(false)
+
+    const closeModalRegion = () => {
+        setOpenModalRegion(prev => prev = false)
+    }
+
   return (
     <div className="header__top">
-        <div className="header__city">
+        <button className="header__city" onClick={() => setOpenModalRegion(prev => prev = true)}>
             <svg width="27" height="36" viewBox="0 0 27 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_81_16)">
                     <path d="M13.5 36C13.7893 36 14.0786 35.8579 14.2232 35.6684C14.7536 35.0526 27 20.3211 27 13.2632C27 5.96842 20.925 0 13.5 0C6.075 0 0 5.96842 0 13.2632C0 20.3211 12.2464 35.0526 12.7768 35.6684C12.9214 35.8579 13.2107 36 13.5 36ZM13.5 1.89474C19.8643 1.89474 25.0714 7.01053 25.0714 13.2632C25.0714 18.7105 16.1518 30.2211 13.5 33.5368C9.69107 28.8 1.92857 18.1895 1.92857 13.2632C1.92857 7.01053 7.13571 1.89474 13.5 1.89474Z" fill="#2B2A29" />
@@ -19,7 +28,7 @@ export default function HeaderTop() {
             <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.174303 1.09526C-0.0908165 0.83305 -0.0377922 0.413521 0.227327 0.151315C0.492446 -0.0584495 0.916637 -0.0584495 1.18176 0.203756L6.48414 6.28693L11.8395 0.203757C12.0516 -0.058449 12.4758 -0.0584489 12.794 0.151316C13.0591 0.413522 13.0591 0.833051 12.847 1.09526L7.01438 7.75529C6.74926 8.06993 6.27205 8.06993 6.00693 7.75528L0.174303 1.09526Z" fill="#2B2A29" />
             </svg>
-        </div>
+        </button>
         <div className="header__right">
             <div className="header__cart">
                 <span className="header__cart-text">КОРЗИНА (0)</span>
@@ -35,6 +44,7 @@ export default function HeaderTop() {
                 </svg>
             </div>
         </div>
+        <ModalBlock openModalRegion={openModalRegion} closeModalRegion={closeModalRegion} />
     </div>
   )
 }

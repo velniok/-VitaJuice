@@ -1,0 +1,38 @@
+.modal-region {
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 25px;
+    }
+
+    &__btn {
+        margin-bottom: 33px;
+        width: 93px;
+        height: 36px;
+    }
+
+    &__nav {
+
+        &-title {
+            margin-bottom: 18px;
+            font-size: 25px;
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 8px;
+            justify-content: space-between;
+        }
+
+        &-item {
+            cursor: pointer;
+
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--yellow-color)
+            }
+        }
+    }
+}

@@ -6,6 +6,8 @@
         height: 1262px;
         color: var(--white-color);
         padding: 40px 0 46px;
+        border-bottom: 2px solid var(--black-color);
+        border-top: 2px solid var(--black-color);
     }
 
     &__map {
@@ -170,6 +172,7 @@
         }
 
         &__price {
+
             &-list {
                 flex-direction: column;
                 column-gap: 0;
@@ -188,6 +191,7 @@
 
             &-list {
                 flex-direction: column;
+                row-gap: 24px;
             }
         } 
 
@@ -202,6 +206,7 @@
 
             &-list {
                 flex-direction: column;
+                row-gap: 24px;
             }
         }
     }

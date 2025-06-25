@@ -57,7 +57,6 @@ export default function Popular() {
             setScreenWidth(window.innerWidth);
         }
         
-        console.log(screenWidth)
         if (screenWidth > 576) {
             setScreenCard(prev => prev = 3)
         } else {
@@ -73,7 +72,7 @@ export default function Popular() {
 
   return (
     <section className="popular">
-        <h1 className="populat-title title">ХИТЫ ПРОДАЖ</h1>
+        <h1 className="popular-title title">ХИТЫ ПРОДАЖ</h1>
         <div className="container">
             <div className="popular-wrapper">
                 <div className="popular__card">
@@ -98,8 +97,6 @@ export default function Popular() {
                 <button className={`popular__card-btn--next btn--arrow ${activeSlider === popularCards.length - screenCard ? 'disable' : ''}`} onClick={() => {
                     if (activeSlider < popularCards.length - screenCard) {
                         setActiveSlider(prev => prev + 1)
-                        console.log(screenCard)
-                        console.log(screenWidth)
                     }
                 }}>
                     <svg width="23" height="35" viewBox="0 0 23 35" fill="none" xmlns="http://www.w3.org/2000/svg">

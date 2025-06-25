@@ -4,6 +4,9 @@
 @use 'components/header';
 @use 'components/footer';
 
+@use 'components/modals/modal';
+@use 'components/modals/modalRegion';
+
 @use 'components/hero';
 @use 'components/products';
 @use 'components/popular';

@@ -1,10 +1,16 @@
 .loyalty {
+    border-bottom: 2px solid var(--black-color);
+
+    &-title {
+        border-bottom: 2px solid var(--black-color);
+    }
 
     & .container {
         max-width: 1383px;
     }
 
     &-wrapper {
+        padding: 50px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
