@@ -357,6 +357,34 @@
     }
 }
 
+@media screen and (max-width: 1700px) {
+    .header {
+        &__logo {
+            top: 145px
+        }
+        
+        &__contacts {
+            &-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1485px) {
+    .header {
+        &__menu {
+            &-list {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                row-gap: 50px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 576px) {
     .header {
         &-wrapper {

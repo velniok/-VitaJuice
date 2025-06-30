@@ -4,6 +4,7 @@ import HeaderTop from "./HeaderTop";
 import logo from '../../assets/logo.png'
 import { useEffect } from "react";
 import HeaderBurger from "./HeaderBurger";
+import { Link } from "react-router";
 
 
 export default function Header() {
@@ -17,7 +18,9 @@ export default function Header() {
                     <HeaderMenu />
                     <HeaderContacts />
                 </nav>
-                <img src={logo} alt="Vita Juice" className="header__logo" />
+                <Link to="/-VitaJuice">
+                  <img src={logo} alt="Vita Juice" className="header__logo" />
+                </Link>
                 <HeaderBurger />
             </div>
         </div>

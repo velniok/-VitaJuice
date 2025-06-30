@@ -1,23 +1,14 @@
-import Delivery from "./components/DeliveryBlock";
-import Footer from "./components/Footer";
-import Header from "./components/HeaderBlock/index";
-import Hero from "./components/HeroBlock/index";
-import Loyalty from "./components/LoyaltyBlock";
-import Popular from "./components/PopularBlock";
-import Products from "./components/ProductsBlock";
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home";
+import Category from "./pages/Category";
 
 export default function App() {
   return (
     <>
-      <Header />
-      <main className="main">
-        <Hero />
-        <Products />
-        <Popular />
-        <Delivery />
-        <Loyalty />
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/-VitaJuice" element={<Home />} />
+        <Route path="/-VitaJuice/category/:categoryName" element={<Category />} />
+      </Routes>
     </>
   )
 }

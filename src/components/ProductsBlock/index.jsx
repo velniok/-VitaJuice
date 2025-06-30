@@ -6,41 +6,49 @@ export default function Products() {
     const productNav = [
         {
             id: 1,
+            categoryName: "juices",
             title: 'СОКИ',
             img: '/-VitaJuice/img/products/products-nav-01.png'
         },
                 {
             id: 2,
+            categoryName: "mixes",
             title: 'МИКСЫ',
             img: '/-VitaJuice/img/products/products-nav-02.png'
         },
                 {
             id: 3,
+            categoryName: "smoothie",
             title: 'СМУЗИ',
             img: '/-VitaJuice/img/products/products-nav-03.png'
         },
                 {
             id: 4,
+            categoryName: "detox",
             title: 'ДЕТОКСЫ',
             img: '/-VitaJuice/img/products/products-nav-04.png'
         },
                 {
             id: 5,
+            categoryName: "lassi",
             title: 'ЛАССИ',
             img: '/-VitaJuice/img/products/products-nav-05.png'
         },
                 {
             id: 6,
+            categoryName: "bowls",
             title: 'БОУЛЫ',
             img: '/-VitaJuice/img/products/products-nav-06.png'
         },
                 {
             id: 7,
+            categoryName: "salads",
             title: 'САЛАТЫ',
             img: '/-VitaJuice/img/products/products-nav-07.png'
         },
                 {
             id: 8,
+            categoryName: "healthy-food",
             title: 'ЗДОРОВАЯ ЕДА',
             img: '/-VitaJuice/img/products/products-nav-08.png'
         },

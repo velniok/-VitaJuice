@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 export default function HeaderMenu() {
@@ -5,44 +6,44 @@ export default function HeaderMenu() {
     <div className="header__menu">
         <ul className="header__menu-list">
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--orange01">
+                <Link to="/-VitaJuice/category/juices" className="header__menu-link header__menu-link--orange01">
                     СОКИ
-                </a>
+                </Link>
             </li>
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--yellow">
+                <Link to="/-VitaJuice/category/mixes" className="header__menu-link header__menu-link--yellow">
                     МИКСЫ
-                </a>
+                </Link>
             </li>
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--pink01">
+                <Link to="/-VitaJuice/category/smoothie" className="header__menu-link header__menu-link--pink01">
                     СМУЗИ
-                </a>
+                </Link>
             </li>
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--pink02">
+                <Link to="/-VitaJuice/category/lassi" className="header__menu-link header__menu-link--pink02">
                     ЛАССИ
-                </a>
+                </Link>
             </li>
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--orange02">
+                <Link to="/-VitaJuice/category/detox" className="header__menu-link header__menu-link--orange02">
                     ДЕТОКС
-                </a>
+                </Link>
             </li>
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--purple">
+                <Link to="/-VitaJuice/category/bowls" className="header__menu-link header__menu-link--purple">
                     БОУЛЫ
-                </a>
+                </Link>
             </li>
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--green01">
+                <Link to="/-VitaJuice/category/salads" className="header__menu-link header__menu-link--green01">
                     САЛАТЫ
-                </a>
+                </Link>
             </li>
             <li className="header__menu-item">
-                <a href="#!" className="header__menu-link header__menu-link--green02">
+                <Link to="/-VitaJuice/category/healthy-food" className="header__menu-link header__menu-link--green02">
                     ЗДОРОВАЯ ЕДА
-                </a>
+                </Link>
             </li>
         </ul>
     </div>
