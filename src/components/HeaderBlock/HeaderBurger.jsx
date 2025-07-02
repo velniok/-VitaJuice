@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logoMobile from '../../assets/logo-mobile.png'
+import { Link } from 'react-router'
 
 export default function HeaderBurger() {
     const [activeBurger, setActiveBurger] = useState(false)
@@ -56,7 +57,9 @@ export default function HeaderBurger() {
         </nav>
         <div className="mobile__burger" style={{ transform: `translateX(-${activeBurger ? 0 : 100}%)` }}>
             <div className="mobile__burger-top">
-                <img src={logoMobile} alt="Vita Juice" className="mobile__burger-logo" />
+                <Link to="/-VitaJuice" className="mobile__burger-logo--link" onClick={() => {clickBurger(), document.body.classList.remove('disable')}}>
+                    <img src={logoMobile} alt="Vita Juice" className="mobile__burger-logo" />
+                </Link>
                 <button className="mobile__burger-close" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>
                     <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" clipRule="evenodd" d="M0.334668 13.7002C0.534668 13.9002 0.734668 14.0002 1.03467 14.0002C1.33467 14.0002 1.53467 13.9002 1.73467 13.7002L7.03467 8.40024L12.3347 13.7002C12.5347 13.9002 12.8347 14.0002 13.0347 14.0002C13.2347 14.0002 13.5347 13.9002 13.7347 13.7002C14.1347 13.3002 14.1347 12.7002 13.7347 12.3002L8.43467 7.00024L13.7347 1.70024C14.1347 1.30024 14.1347 0.700244 13.7347 0.300244C13.3347 -0.0997559 12.7347 -0.0997559 12.3347 0.300244L7.03467 5.60024L1.73467 0.300244C1.33467 -0.0997559 0.734668 -0.0997559 0.334668 0.300244C-0.065332 0.700244 -0.065332 1.30024 0.334668 1.70024L5.63467 7.00024L0.334668 12.3002C-0.065332 12.7002 -0.065332 13.3002 0.334668 13.7002Z" fill="#2B2A29" />
@@ -84,32 +87,32 @@ export default function HeaderBurger() {
                 <ul className="mobile__menu-list" style={{ transform: `translateX(-${activeMenu ? 0 : 200}%)` }}>
                     <div className="mobile__menu-row">
                         <li className="mobile__menu-item">
-                            СОКИ
+                            <Link to="/-VitaJuice/category/juices" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>СОКИ</Link>
                         </li>
                         <li className="mobile__menu-item">
-                            МИКСЫ
+                            <Link to="/-VitaJuice/category/mixes" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>МИКСЫ</Link>
                         </li>
                         <li className="mobile__menu-item">
-                            СМУЗИ
-                        </li>
-                    </div>
-                    <div className="mobile__menu-row">
-                        <li className="mobile__menu-item">
-                            ЛАССИ
-                        </li>
-                        <li className="mobile__menu-item">
-                            ДЕТОКС
-                        </li>
-                        <li className="mobile__menu-item">
-                            БОУЛЫ
+                            <Link to="/-VitaJuice/category/smoothie" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>СМУЗИ</Link>
                         </li>
                     </div>
                     <div className="mobile__menu-row">
                         <li className="mobile__menu-item">
-                            САЛАТЫ
+                            <Link to="/-VitaJuice/category/lassi" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>ЛАССИ</Link>
                         </li>
                         <li className="mobile__menu-item">
-                            ЗДОРОВАЯ ЕДА
+                            <Link to="/-VitaJuice/category/detox" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>ДЕТОКС</Link>
+                        </li>
+                        <li className="mobile__menu-item">
+                            <Link to="/-VitaJuice/category/bowls" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>БОУЛЫ</Link>
+                        </li>
+                    </div>
+                    <div className="mobile__menu-row">
+                        <li className="mobile__menu-item">
+                            <Link to="/-VitaJuice/category/salads" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>САЛАТЫ</Link>
+                        </li>
+                        <li className="mobile__menu-item">
+                            <Link to="/-VitaJuice/category/healthy-food" className="mobile__menu-link" onClick={() => {clickBurger(), clickMenu(), document.body.classList.remove('disable')}}>ЗДОРОВАЯ ЕДА</Link>
                         </li>
                     </div>
                 </ul>

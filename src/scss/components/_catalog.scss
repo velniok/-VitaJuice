@@ -88,3 +88,71 @@
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    .catalog {
+        &-title {
+            font-size: 40px;
+        }
+
+        &__card {
+            &-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            &-item {
+                width: 300px;
+            }
+
+            &-img {
+                margin-bottom: 23px;
+                max-width: 73%;
+            }
+
+            &-title {
+                margin-bottom: 16px;
+                font-size: 25px;
+            }
+
+            &-size {
+                margin-bottom: 24px;
+                font-size: 20px;
+            }
+
+            &-bottom {
+                margin-bottom: 25px;
+                column-gap: 20px;
+            }
+
+            &-price {
+                font-size: 30px;
+            }
+
+            &-like {
+
+                & svg {
+                    width: 22px;
+                    height: 18px;
+                }
+            }
+        }
+
+        &__bonus {
+            width: 81px;
+            height: 81px;
+            top: 20px;
+            right: 20px;
+
+            &-text {
+                font-size: 18px;
+            }
+
+            &-icon {
+                width: 47px;
+                height: 24px;
+            }
+        }
+    }
+}
