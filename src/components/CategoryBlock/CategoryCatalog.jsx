@@ -1,7 +1,7 @@
 import React from 'react'
 import CategoryCatalogItem from './CategoryCatalogItem'
 
-export default function CategoryCatalog({ catalog, categoryName }) {
+export default function CategoryCatalog({ catalog, categoryName, addToCart, categoryId }) {
     
   return (
     <section className="catalog">
@@ -12,7 +12,12 @@ export default function CategoryCatalog({ catalog, categoryName }) {
                     <ul className="catalog__card-list">
                         {
                             catalog.map(obj => (
-                                <CategoryCatalogItem key={obj.id} item={obj} />
+                                <CategoryCatalogItem 
+                                key={obj.id}
+                                item={obj} 
+                                addToCart={addToCart}
+                                categoryId={categoryId}
+                                />
                             ))
                         }
                     </ul>

@@ -7,13 +7,13 @@ import HeaderBurger from "./HeaderBurger";
 import { Link } from "react-router";
 
 
-export default function Header() {
+export default function Header({ doAddToCart, categoryId }) {
 
   return (
     <header className="header">
         <div className="container">
             <div className="header-wrapper">
-                <HeaderTop />
+                <HeaderTop doAddToCart={doAddToCart} categoryId={categoryId} />
                 <nav className="header__nav">
                     <HeaderMenu />
                     <HeaderContacts />

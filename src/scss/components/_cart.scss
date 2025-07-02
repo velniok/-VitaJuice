@@ -1,0 +1,124 @@
+.cart {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.4s, visibility 0.4s ease;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-background {
+        position: fixed;
+        top: 150px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(196, 196, 196, 0.76);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-content {
+        margin-top: 4px;
+        margin-right: 75px;
+        background-color: var(--white-color);
+        width: 521px;
+        height: 703px;
+        border-radius: 50px;
+    }
+
+    &__card {
+        margin-top: 33px;
+        margin-left: 30px;
+        height: 540px;
+        width: 455px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            background-color: #ddd;
+            border-radius: 20px;
+            width: 24px;
+            height: 540px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--yellow-color);
+            border-radius: 20px;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+        }
+
+        &-item {
+            position: relative;
+            width: 402px;
+            position: relative;
+            display: flex;
+            border-bottom: 2px dashed var(--black-color);
+            padding-bottom: 15px;
+        }
+
+        &-img {
+            max-width: 36%;
+        }
+
+        &-info {
+            margin-left: 9px;
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-title {
+            font-size: 25px;
+            margin-bottom: 11px;
+        }
+
+        &-size {
+            font-size: 20px;
+            margin-bottom: 11px;
+        }
+
+        &-composition {
+            color: #797272;
+            font-size: 14px;
+        }
+
+        &-price {
+            position: absolute;
+            font-size: 25px;
+            right: 0;
+            bottom: 15px;
+        }
+
+        &-delete {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            & path {
+                transition: fill 0.3s ease;
+            }
+
+            &:hover path {
+                fill: var(--yellow-color)
+            }
+        }
+    }
+
+    &__sum {
+        background-color: var(--yellow-color);
+        font-size: 25px;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 89px 25px 28px;
+    }
+}

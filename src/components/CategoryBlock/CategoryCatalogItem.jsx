@@ -1,7 +1,7 @@
 import React from 'react'
 import bonusIcon from '../../assets/category/bonus-icon.svg'
 
-export default function CategoryCatalogItem({ item }) {
+export default function CategoryCatalogItem({ item, addToCart, categoryId }) {
   return (
     <li className="catalog__card-item">
         {
@@ -23,7 +23,7 @@ export default function CategoryCatalogItem({ item }) {
                 </svg>
             </div>
         </div>
-        <button className="catalog__card-btn btn--yellow">В КОРЗИНУ</button>
+        <button className="catalog__card-btn btn--yellow" onClick={() => addToCart(item.id, categoryId)}>В КОРЗИНУ</button>
     </li>
   )
 }

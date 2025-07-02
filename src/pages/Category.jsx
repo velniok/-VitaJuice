@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
-import Header from '../components/HeaderBlock'
-import Footer from '../components/Footer'
 import CategoryBlock from '../components/CategoryBlock'
 import { useLocation } from 'react-router'
 
-export default function Category() {
+export default function Category({ addToCart }) {
 
   const { pathname } = useLocation()
 
@@ -16,9 +14,7 @@ export default function Category() {
 
   return (
     <>
-        <Header />
-        <CategoryBlock />
-        <Footer />
+      <CategoryBlock addToCart={addToCart} />
     </>
   )
 }

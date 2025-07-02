@@ -9,7 +9,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-01.png',
                 title: 'ЛАССИ',
                 size: '500',
-                price: '375',
+                price: 375,
                 bonus: '0',
             },
             {
@@ -17,7 +17,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-02.png',
                 title: 'МИКС',
                 size: '500',
-                price: '400',
+                price: 400,
                 bonus: '20',
             },
             {
@@ -25,7 +25,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-03.png',
                 title: 'БОУЛ',
                 size: '500',
-                price: '450',
+                price: 450,
                 bonus: '0',
             },
             {
@@ -33,7 +33,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-04.png',
                 title: 'АПЕЛЬСИНОВЫЙ СОК',
                 size: '500',
-                price: '400',
+                price: 400,
                 bonus: '0',
             },
             {
@@ -41,7 +41,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-05.png',
                 title: 'СМУЗИ',
                 size: '500',
-                price: '385',
+                price: 385,
                 bonus: '0',
             },
             {
@@ -49,7 +49,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-06.png',
                 title: 'ДЕТОКС',
                 size: '500',
-                price: '500',
+                price: 500,
                 bonus: '50',
             },
             {
@@ -57,7 +57,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-07.png',
                 title: 'ДОКТОР',
                 size: '500',
-                price: '375',
+                price: 375,
                 bonus: '0',
             },
             {
@@ -65,7 +65,8 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-08.png',
                 title: 'ГРАНАТОВЫЙ СОК',
                 size: '500',
-                price: '500',
+                composition: 'гранат, лед',
+                price: 500,
                 bonus: '20',
             },
             {
@@ -73,7 +74,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-09.png',
                 title: 'ГРИН',
                 size: '500',
-                price: '450',
+                price: 450,
                 bonus: '0',
             },
             {
@@ -81,7 +82,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-01.png',
                 title: 'ЛАССИ',
                 size: '500',
-                price: '375',
+                price: 375,
                 bonus: '0',
             },
             {
@@ -89,7 +90,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-02.png',
                 title: 'МИКС',
                 size: '500',
-                price: '400',
+                price: 400,
                 bonus: '20',
             },
             {
@@ -97,7 +98,7 @@ const productList = [
                 img: '/-VitaJuice/img/productList/product-img-03.png',
                 title: 'БОУЛ',
                 size: '500',
-                price: '450',
+                price: 450,
                 bonus: '0',
             },
         ]
